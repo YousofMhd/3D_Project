@@ -51,7 +51,7 @@ void display(void)
 
     //circle
     glPushMatrix();
-    glColor3f(1.0,0,0.5);
+    glColor3f(1,0.5,1);
     glTranslated(0 + shiftXaxis, 3, -10 + shiftZaxis);
     glutSolidSphere(2, 10, 10);
     glPopMatrix();
@@ -197,7 +197,7 @@ void personmove(int key, int x, int y) {
 
 int main(int argc, char** argv)
 {
-    //PlaySound(TEXT("20103360.wav")sync_none:SND);
+    //PlaySound("20103360.wav",SND_ASYNC);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
     glutInitWindowSize(1000, 1000);

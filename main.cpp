@@ -1,11 +1,12 @@
 #include<GL/gl.h>
 #include<GL/glu.h>
 #include<GL/glut.h>
-#include<stdlib.h>
+
 #include<windows.h>
 #include<math.h>
 #include<string>
-
+#include<stdlib.h>
+#include<mmsystem.h>
 
 int delay = 1000 / 75;
 float xRotated = 90.0, yRotated = 0.0, zRotated = 0.0;
@@ -197,6 +198,7 @@ void personmove(int key, int x, int y) {
 
 int main(int argc, char** argv)
 {
+    PlaySound(TEXT("20103360.wav")sync_none:SND);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE); // buffer mode
     glutInitWindowSize(500, 500);

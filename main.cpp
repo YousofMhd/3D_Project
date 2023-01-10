@@ -1,7 +1,6 @@
 #include<GL/gl.h>
 #include<GL/glu.h>
 #include<GL/glut.h>
-
 #include<windows.h>
 #include<math.h>
 #include<string>
@@ -198,10 +197,10 @@ void personmove(int key, int x, int y) {
 
 int main(int argc, char** argv)
 {
-    PlaySound(TEXT("20103360.wav")sync_none:SND);
+    //PlaySound(TEXT("20103360.wav")sync_none:SND);
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE); // buffer mode
-    glutInitWindowSize(500, 500);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
+    glutInitWindowSize(1000, 1000);
     glutInitWindowPosition(300, 300);
     glutCreateWindow("20103360");
     glClearColor(1.0, 1.0, 1.0, 0.0);
@@ -213,7 +212,7 @@ int main(int argc, char** argv)
     glutSpecialFunc(personmove);
     glutIdleFunc(idleFunc);
     glutTimerFunc(0, timer, 0);
-    glClearColor(1, 1, 0, 0);
+    glClearColor(1, 1, 0, 0.5);
 
     glutMainLoop();
 }
